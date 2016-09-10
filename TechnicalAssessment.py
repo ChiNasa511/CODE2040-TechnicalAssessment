@@ -5,15 +5,17 @@
 import json, requests, math, time, datetime
 
 # My API token
-APItoken = '887f59644a4b65b0f9a3cf52ba293ce3'
+myAPIToken = '887f59644a4b65b0f9a3cf52ba293ce3'
 
 # Step 1 - Connect to the registration endpoint
 def Step1Registration():
-  endpoint = 'http://challenge.code2040.org/api/register'
-  myGithub = 'https://github.com/ChiNasa511/CODE2040-TechnicalAssessment'
-  response = requests.post(endpoint, data = {'token': APItoken, 'github': myGithub});
+    myEndpoint = 'http://challenge.code2040.org/api/register'
+    myGithub = 'https://github.com/ChiNasa511/CODE2040-TechnicalAssessment'
+    response = requests.post(myEndpoint, data = {'token': myAPIToken, 'github': myGithub})
 
-  # Print and return the content of the response
-  print(response.text)
-  return(response.text)
+    # Print and return the content of the response
+    print(response.text)
+    return(response.text)
+    
+    
 
