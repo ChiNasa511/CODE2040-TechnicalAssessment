@@ -14,6 +14,6 @@ def Step1Registration()
   response = requests.post(endpoint, data = {'token': token, 'github': github});
 
   # Print and return the content of the response
-  print(response.content)
-  return(response.content)
+  print(response.text)
+  return(response.text)
 
