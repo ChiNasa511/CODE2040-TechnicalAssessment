@@ -16,6 +16,19 @@ def Step1Registration():
     # Print and return the content of the response
     print(response.text)
     return(response.text)
+
+# Step 2 - Connect to the registration endpoint
+def Step2():
     
     
+# Step 3 - Connect to the registration endpoint
+def Step3():
+
+
+# Step 4 - Connect to the registration endpoint
+def Step4():    
+    
+    
+# Step 4 - Connect to the registration endpoint
+def Step5(): 
 
