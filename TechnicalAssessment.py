@@ -5,7 +5,7 @@
 import json, requests, math, time, datetime
 
 # My API token
-token = "887f59644a4b65b0f9a3cf52ba293ce3"
+token = '887f59644a4b65b0f9a3cf52ba293ce3'
 
 # Step 1 - Connect to the registration endpoint
 def Step1Registration()
