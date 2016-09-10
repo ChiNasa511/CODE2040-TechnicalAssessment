@@ -14,8 +14,7 @@ def Step1Registration():
     response = requests.post(myEndpoint, data = {'token': myAPIToken, 'github': myGithub})
 
     # Print and return the content of the response
-    print(response.text)
-    return(response.text)
+ 
 
 # Step 2 - Connect to the registration endpoint
 def Step2():
