@@ -14,24 +14,22 @@ TOKEN = '887f59644a4b65b0f9a3cf52ba293ce3'
 
 # Step 1 - Connect to the registration endpoint
 def Step1Registration(): 
-   # myEndpoint = 'http://challenge.code2040.org/api/register'
-    #myGitHub = 'https://github.com/ChiNasa511/CODE2040TechnicalAssessment/'
-    #myKeys = {'token': TOKEN, 'github': myGitHub}
+    myEndpoint = 'http://challenge.code2040.org/api/register'
+    myGitHub = 'https://github.com/ChiNasa511/CODE2040TechnicalAssessment/'
+    myKeys = {'token': TOKEN, 'github': myGitHub}
     #response = requests.post(myEndpoint, json = myKeys)
 
     # Print the content of the response
     #print(response.text)
+   
+    data = {'token': TOKEN, 'github': myGitHub}
     
-    data = {
-	"token": "887f59644a4b65b0f9a3cf52ba293ce3",
-	"github": "https://github.com/ChiNasa511/CODE2040TechnicalAssessment/"
-    }
-
-    #Make the request
-    apiRequest = requests.post("http://challenge.code2040.org/api/register", data )
-
-#Check the response
-print apiRequest.text
+    response = requests.post(myEndpoint, json = myKeys)
+    
+    if response.status_code != 200:
+        print 'Registration Failed'
+    else:
+        print 'Registration Successful'
 
 # Step 2 - Connect to the registration endpoint
 def Step2():
