@@ -2,7 +2,12 @@
 # Technical Assessment
 # Chinasa T. Okolo, Fall 2016
 
-import json, requests, math, time, datetime, responses
+import json
+import requests
+import math
+import time
+import datetime
+import urllib2
 
 # My API token
 myAPIToken = '887f59644a4b65b0f9a3cf52ba293ce3' 
