@@ -12,11 +12,11 @@ def Step1Registration():
     myEndpoint = 'http://challenge.code2040.org/api/register'
     myGithub = 'https://github.com/ChiNasa511/CODE2040-TechnicalAssessment/'
     myKeys = {'token': myAPIToken, 'github': myGithub}
-    resp = requests.post(myEndpoint, data = myKeys)
+    response = requests.post(myEndpoint, data = myKeys)
 
     # Print and return the content of the response
-    print(resp.text)
-    return(resp.text)
+    print(response.text)
+    return(response.text)
 
 # Step 2 - Connect to the registration endpoint
 def Step2():
