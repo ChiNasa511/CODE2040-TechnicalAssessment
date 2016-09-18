@@ -36,3 +36,7 @@ def Step4():
 # Step 4 - Connect to the registration endpoint
 def Step5(): 
 
+
+# Trick for code to act as reusable module or as standalone program
+if __name__ == '__main__':
+    main()
