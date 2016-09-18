@@ -7,7 +7,6 @@ import requests
 import math
 import time
 import datetime
-import urllib2
 
 # My API token
 TOKEN = '887f59644a4b65b0f9a3cf52ba293ce3' 
