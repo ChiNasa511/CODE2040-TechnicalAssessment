@@ -20,9 +20,8 @@ def Step1Registration():
     headerData = {'Content-type': 'application/json', 'Accept': 'text/plain'}
     response = requests.post(myEndpoint, data = json.dumps(myKeys), headers = headerData)
 
-    # Print and return the content of the response
+    # Print the content of the response
     print(response.text)
-    return(response.text)
 
 # Step 2 - Connect to the registration endpoint
 def Step2():
