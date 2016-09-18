@@ -12,7 +12,8 @@ def Step1Registration():
     myEndpoint = "http://challenge.code2040.org/api/register"
     myGitHub = "https://github.com/ChiNasa511/CODE2040-TechnicalAssessment/"
     myKeys = {'token': myAPIToken, 'github': myGithub}
-    response = requests.post(myEndpoint, myKeys)
+    headerData = {'Content-type': 'application/json', 'Accept': 'text/plain'}
+    response = requests.post(myEndpoint, data = json.dumps(myKeys), headers = headerData)
 
     # Print and return the content of the response
     print(response.text)
