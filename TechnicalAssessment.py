@@ -10,15 +10,14 @@ import datetime
 import urllib2
 
 # My API token
-myAPIToken = '887f59644a4b65b0f9a3cf52ba293ce3' 
+TOKEN = '887f59644a4b65b0f9a3cf52ba293ce3' 
 
 # Step 1 - Connect to the registration endpoint
 def Step1Registration(): 
     myEndpoint = 'http://challenge.code2040.org/api/register'
     myGitHub = 'https://github.com/ChiNasa511/CODE2040-TechnicalAssessment/'
-    myKeys = {'token': myAPIToken, 'github': myGithub}
-    headerData = {'Content-type': 'application/json', 'Accept': 'text/plain'}
-    response = requests.post(myEndpoint, data = json.dumps(myKeys), headers = headerData)
+    myKeys = {'token': TOKEN, 'github': myGithub}
+    response = requests.post(myEndpoint, json = myKeys)
 
     # Print the content of the response
     print(response.text)
