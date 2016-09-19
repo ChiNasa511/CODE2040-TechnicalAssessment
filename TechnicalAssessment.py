@@ -73,13 +73,13 @@ def Step4():
     
     # Return an array containing strings not starting with prefix
     for word in myArray[:]:
-        if word.startswith(myPrefix)
+        if word.startswith(myPrefix):
             myArray.remove(word)
     print myArray
     return myArray
     
     # Post dictionary once array is built
-    myKey = {'token': TOKEN, 'array': newArray}
+    myKey = {'token': TOKEN, 'array': myArray}
     result = requests.post(yourEndpoint, myKey)
 
 # Trick for code to act as reusable module or as standalone program
