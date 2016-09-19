@@ -19,8 +19,8 @@ def Step1Registration():
     response = requests.post(myEndpoint, json = myKeys)
     
     # Check for possible errors
-    if resp.status_code != 201:
-        raise ApiError('POST /myKeys/ {}'.format(response.status_code))
+    if response.status_code != 201:
+        raise ApiError('Cannot fetch all tasks: {}'.format(response.status_code))
     # Print the content of the response
     print(response.text)
 
