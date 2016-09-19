@@ -21,6 +21,8 @@ def Step1Registration():
     # Print the content of the response
     print response.text
     return response.text
+    
+
 
 # Trick for code to act as reusable module or as standalone program
 if __name__ == '__Step1Registration__':
