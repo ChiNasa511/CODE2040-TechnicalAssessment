@@ -20,7 +20,7 @@ def Step1Registration():
 
 # Ensure JSON response is received from requests
 def receiveJSON(myEndpoint):
-    request = requests.post(myEndpoint, data = {'token': myToken})
+    request = requests.post(myEndpoint, data = {'token': TOKEN})
     return request.json()
     
 # Check all steps using unit tests
