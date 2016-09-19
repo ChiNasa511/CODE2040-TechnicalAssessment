@@ -16,7 +16,7 @@ def Step1Registration():
     myEndpoint = 'http://challenge.code2040.org/api/register'
     myGitHub = 'https://github.com/ChiNasa511/CODE2040TechnicalAssessment/'
     myKeys = {'token': TOKEN, 'github': myGitHub}
-    response = requests.post(myEndpoint, data = myKeys)
+    response = requests.post(myEndpoint, myKeys)
 
     # Print the content of the response
     print response.text
@@ -37,7 +37,10 @@ def Step1Registration():
 # Step 4 - Connect to the registration endpoint
 #def Step5():
 
+# Run output from all steps
+
+
 
 # Trick for code to act as reusable module or as standalone program
-#if __name__ == '__main__':
-#   main()
+if __name__ == '__main__':
+   main()
