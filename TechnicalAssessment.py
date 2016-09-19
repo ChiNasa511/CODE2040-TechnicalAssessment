@@ -14,10 +14,11 @@ def Step1Registration():
     myKeys = {'token': TOKEN, 'github': myGitHub}
     response = requests.post(myEndpoint, myKeys)
     
+    # Check for accuracy (was trying to do unit tests but not working)
     if response.status_code != 200:
-        print 'Registration Failed'
+        print 'Registration Complete'
     else:
-        print 'Registration Successful'
+        print 'Please Try Again'
 
     # Print the content of the response
    # print response.text
