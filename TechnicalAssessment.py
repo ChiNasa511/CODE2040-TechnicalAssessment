@@ -17,7 +17,7 @@ def Step1Registration():
     # Print the content of the response
     print response.text
     return response.text
-    
+
 # Ensure JSON response is received from requests
 def receiveJSON(myEndpoint):
     request = requests.post(myEndpoint, data = {'token': myToken})
@@ -31,5 +31,5 @@ class APIChallengeTest(unittest.TestCase):
 
 # Trick for code to act as reusable module or as standalone program
 if __name__ == "__main__":
-    main()
+    unittest.main()
 
