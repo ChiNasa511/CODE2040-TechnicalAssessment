@@ -49,5 +49,6 @@ def receiveJSON(myEndpoint):
 
 # Trick for code to act as reusable module or as standalone program
 if __name__ == "__main__":
-    Step1()
+    #Step1()
+    Step2()
 
