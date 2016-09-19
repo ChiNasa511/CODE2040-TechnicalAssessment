@@ -25,21 +25,21 @@ def Step1Registration():
     print(response.text)
 
 # Step 2 - Connect to the registration endpoint
-def Step2():
+#def Step2():
     
     
 # Step 3 - Connect to the registration endpoint
-def Step3():
+#def Step3():
 
 
 # Step 4 - Connect to the registration endpoint
-def Step4():     
+#def Step4():
     
     
 # Step 4 - Connect to the registration endpoint
-def Step5(): 
+#def Step5():
 
 
 # Trick for code to act as reusable module or as standalone program
-if __name__ == '__main__':
-    main()
+#if __name__ == '__main__':
+#   main()
