@@ -42,7 +42,7 @@ def receiveJSON(myEndpoint):
     
 # Step 3 - Needle in a haystack
 def Step3(): 
-    dict = 'http://challenge.code2040.org/api/haystack
+    dict = 'http://challenge.code2040.org/api/haystack'
     yourEndpoint = 'http://challenge.code2040.org/api/haystack/validate'
     needle = 'needle'
     haystack = 'haystack'
