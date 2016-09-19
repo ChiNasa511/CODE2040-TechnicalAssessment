@@ -23,5 +23,5 @@ def Step1Registration():
     return response.text
 
 # Trick for code to act as reusable module or as standalone program
-if __name__ == '__main__':
+if __name__ == '__Step1Registration__':
    main()
