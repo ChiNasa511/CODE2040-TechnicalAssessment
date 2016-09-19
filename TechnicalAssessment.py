@@ -44,13 +44,18 @@ def receiveJSON(myEndpoint):
 def Step3(): 
     dict = 'http://challenge.code2040.org/api/haystack'
     yourEndpoint = 'http://challenge.code2040.org/api/haystack/validate'
-    needle = 'needle'
-    haystack = 'haystack'
+    needle = dict['needle']
+    haystack = dict['haystack']
     myKey = {'token': TOKEN}
     
     # Get index
-    needleIndex = haystack.index(needle)
+    #needleIndex = haystack.index(needle)
     
+    for i, j in enumerate(haystack):
+        if j == needle:
+            needleIndex = i
+            print needleIndex
+
     # Send index
     myKey = {'token': TOKEN, 'needle': needleIndex}
     result = requests.post(yourEndpoint, myKey)
