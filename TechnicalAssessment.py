@@ -9,7 +9,7 @@ import time
 import datetime
 
 # My API token
-TOKEN = '887f59644a4b65b0f9a3cf52ba293ce3' 
+TOKEN = '887f59644a4b65b0f9a3cf52ba293ce3' n,mn,m
 
 # Step 1 - Connect to the registration endpoint
 def Step1Registration(): 
