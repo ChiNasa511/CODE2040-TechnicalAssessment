@@ -21,8 +21,8 @@ def Step1Registration():
         print 'Please Try Again'
 
     # Print the content of the response
-   # print response.text
-    #return response.text
+    print response.text
+    return response.text
 
 # Ensure JSON response is received from requests
 def receiveJSON(myEndpoint):
