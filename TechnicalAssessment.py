@@ -32,7 +32,7 @@ def receiveJSON(myEndpoint):
 class APIChallengeTest(unittest.TestCase):
     
     def Step1Test(self):
-        self.assertEqual("Step 1 Complete", Step1Registration())
+        self.assertEqual("Step 1 complete", Step1Registration())
 
 # Trick for code to act as reusable module or as standalone program
 if __name__ == "__main__":
