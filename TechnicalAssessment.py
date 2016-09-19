@@ -37,7 +37,7 @@ def Step2():
     string = requests.post(yourEndpoint, myKey)
     
      # Check if string sent 
-    if myReversedString.status_code != 200:
+    if reverseString.status_code != 200:
         print string.text
         return string.text
 
