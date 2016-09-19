@@ -8,7 +8,7 @@ import json, unittest, requests, math, time, datetime
 TOKEN = '887f59644a4b65b0f9a3cf52ba293ce3'
 
 # Step 1 - Connect to the registration endpoint
-def Step1Registration(): 
+def Step1(): 
     myEndpoint = 'http://challenge.code2040.org/api/register'
     myGitHub = 'https://github.com/ChiNasa511/CODE2040TechnicalAssessment/'
     myKeys = {'token': TOKEN, 'github': myGitHub}
@@ -17,15 +17,37 @@ def Step1Registration():
     # Check for accuracy (was trying to do unit tests but not working)
     if response.status_code != 200:
         print response.text
-    else:
-        print 'Step 1 incomplete'
+        return response.text
+   
+# Step 2 - Reverse a string
+def Step2(): 
+    myEndpoint = 'http://challenge.code2040.org/api/reverse'
+    yourEndpoint = 'http://challenge.code2040.org/api/reverse/validate'
+    myKey = {'token': TOKEN}
+    string = requests.post(myEndpoint, myKey)
+    
+     # Check if string retrieved 
+    if string.status_code != 200:
+        print string
+        return string
+    
+    # Reverse string
+    myReversedString = string.text[::-1]
+    
+    # Send string back
+    revString = requests.post(yourEndpoint, myKey)
+    
+     # Check if string sent 
+    if myReversedString.status_code != 200:
+        print string
 
-# Ensure JSON response is received from requests
+
+# Ensure JSON response is received from all requests
 def receiveJSON(myEndpoint):
     request = requests.post(myEndpoint, data = {'token': TOKEN})
     return request.json()
 
 # Trick for code to act as reusable module or as standalone program
 if __name__ == "__main__":
-    Step1Registration()
+    Step1()
 
