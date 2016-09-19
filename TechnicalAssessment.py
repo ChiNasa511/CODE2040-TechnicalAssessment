@@ -26,20 +26,20 @@ def Step2():
     myKey = {'token': TOKEN}
     string = requests.post(myEndpoint, myKey)
     
-     # Check if string retrieved 
-   # if string.status_code != 200:
-        print string.text
-        return string.text
+    # Check if string retrieved 
+    # if string.status_code != 200:
+    print string.text
+    return string.text
     
     # Reverse and send string back
     reverseString = string.text[::-1]
     myKey = {'token': TOKEN, 'string': reverseString}
     string = requests.post(yourEndpoint, myKey)
     
-     # Check if string sent 
-   # if reverseString.status_code != 200:
-        print string.text
-        return string.text
+    # Check if string sent 
+    # if reverseString.status_code != 200:
+    print string.text
+    return string.text
 
 
 # Ensure JSON response is received from all requests
