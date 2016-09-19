@@ -29,12 +29,12 @@ def receiveJSON(myEndpoint):
     return request.json()
     
 # Check all steps using unit tests
-#class APIChallengeTest(unittest.TestCase):
+class APIChallengeTest(unittest.TestCase):
     
- #   def Step1Test(self):
-  #      self.assertEqual("Step 1 Complete", Step1Registration())
+    def Step1Test(self):
+        self.assertEqual("Step 1 Complete", Step1Registration())
 
 # Trick for code to act as reusable module or as standalone program
 if __name__ == "__main__":
-    Step1Registration()
+    unittest.main()
 
