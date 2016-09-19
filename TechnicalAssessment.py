@@ -16,11 +16,8 @@ def Step1Registration():
     myEndpoint = 'http://challenge.code2040.org/api/register'
     myGitHub = 'https://github.com/ChiNasa511/CODE2040TechnicalAssessment/'
     myKeys = {'token': TOKEN, 'github': myGitHub}
-    response = requests.post(myEndpoint, json = myKeys)
-    
-    # Check for possible errors
-    if response.status_code != 201:
-        raise ApiError('Cannot fetch all tasks: {}'.format(response.status_code))
+    response = requests.post(myEndpoint, data = myKeys)
+
     # Print the content of the response
     print(response.text)
 
