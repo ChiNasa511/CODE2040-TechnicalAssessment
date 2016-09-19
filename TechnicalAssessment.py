@@ -49,10 +49,7 @@ def Step3():
     myKey = {'token': TOKEN}
     
     # Get index
-    for i, j in enumerate(haystack):
-        if j == needle:
-            needleIndex = i
-            print needleIndex
+    needleIndex = haystack.index(needle)
     
     # Send index
     myKey = {'token': TOKEN, 'needle': needleIndex}
