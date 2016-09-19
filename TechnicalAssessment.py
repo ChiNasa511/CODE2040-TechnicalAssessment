@@ -30,7 +30,7 @@ def Step3():
 
 
 # Step 4 - Connect to the registration endpoint
-def Step4():    
+def Step4():     
     
     
 # Step 4 - Connect to the registration endpoint
