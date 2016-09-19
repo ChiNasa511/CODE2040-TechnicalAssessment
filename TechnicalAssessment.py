@@ -17,7 +17,10 @@ def Step1Registration():
     myGitHub = 'https://github.com/ChiNasa511/CODE2040TechnicalAssessment/'
     myKeys = {'token': TOKEN, 'github': myGitHub}
     response = requests.post(myEndpoint, json = myKeys)
-
+    
+    # Check for possible errors
+    if resp.status_code != 201:
+        raise ApiError('POST /myKeys/ {}'.format(response.status_code))
     # Print the content of the response
     print(response.text)
 
