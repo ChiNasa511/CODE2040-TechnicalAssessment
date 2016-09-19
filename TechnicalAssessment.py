@@ -13,10 +13,15 @@ def Step1Registration():
     myGitHub = 'https://github.com/ChiNasa511/CODE2040TechnicalAssessment/'
     myKeys = {'token': TOKEN, 'github': myGitHub}
     response = requests.post(myEndpoint, myKeys)
+    
+    if response.status_code != 200:
+        print 'Registration Failed'
+    else:
+        print 'Registration Successful'
 
     # Print the content of the response
-    print response.text
-    return response.text
+   # print response.text
+    #return response.text
 
 # Ensure JSON response is received from requests
 def receiveJSON(myEndpoint):
@@ -24,12 +29,12 @@ def receiveJSON(myEndpoint):
     return request.json()
     
 # Check all steps using unit tests
-class APIChallengeTest(unittest.TestCase):
+#class APIChallengeTest(unittest.TestCase):
     
-    def Step1Test(self):
-        self.assertEqual("Step 1 Complete", Step1Registration())
+ #   def Step1Test(self):
+  #      self.assertEqual("Step 1 Complete", Step1Registration())
 
 # Trick for code to act as reusable module or as standalone program
 if __name__ == "__main__":
-    unittest.main()
+    Step1Registration()
 
