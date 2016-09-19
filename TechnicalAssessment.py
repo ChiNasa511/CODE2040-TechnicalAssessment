@@ -19,13 +19,13 @@ def Step1Registration():
     return response.text
     
 # Ensure JSON response is received from requests
-def getJsonResponse(endpointURL):
-    req = requests.post(myEndpoint, data = {'token': myToken})
-    return req.json()
+def receiveJSON(myEndpoint):
+    request = requests.post(myEndpoint, data = {'token': myToken})
+    return request.json()
     
 # Check all steps using unit tests
 class APIChallengeTest(unittest.TestCase):
-    def testStepOne(self):
+    def Step1Test(self):
         self.assertEqual("Step 1 Complete", Step1Registration())
 
 if __name__ == '__main__':
