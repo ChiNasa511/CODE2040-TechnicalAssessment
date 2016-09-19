@@ -72,7 +72,7 @@ def Step4():
     myKey = {'token': TOKEN}
     
     # Return an array containing strings not starting with prefix
-    newArray = [word for word in myArray if not x.startswith(myPrefix)]
+    newArray = [word for word in myArray if not word.startswith(myPrefix)]
     
     # Post dictionary once array is built
     myKey = {'token': TOKEN, 'array': myArray}
