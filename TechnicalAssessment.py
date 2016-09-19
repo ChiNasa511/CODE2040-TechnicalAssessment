@@ -20,6 +20,7 @@ def Step1Registration():
 
     # Print the content of the response
     print(response.text)
+    return(response.text)
 
 # Step 2 - Connect to the registration endpoint
 #def Step2():
