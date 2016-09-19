@@ -35,14 +35,14 @@ def Step2():
     print string.text
     return string.text
 
-# Ensure JSON response is received from all requests
+# Helper to ensure JSON response is received from all requests
 def receiveJSON(myEndpoint):
     request = requests.post(myEndpoint, data = {'token': TOKEN})
     return request.json()
     
 # Step 3 - Needle in a haystack
 def Step3(): 
-    dict = 'http://challenge.code2040.org/api/haystack'
+    dict = receiveJSON('http://challenge.code2040.org/api/haystack')
     yourEndpoint = 'http://challenge.code2040.org/api/haystack/validate'
     needle = dict['needle']
     haystack = dict['haystack']
