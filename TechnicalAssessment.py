@@ -26,29 +26,46 @@ def Step2():
     myKey = {'token': TOKEN}
     string = requests.post(myEndpoint, myKey)
     
-    # Check if string retrieved 
-    # if string.status_code != 200:
-    print string.text
-    return string.text
-    
     # Reverse and send string back
     reverseString = string.text[::-1]
     myKey = {'token': TOKEN, 'string': reverseString}
     string = requests.post(yourEndpoint, myKey)
     
     # Check if string sent 
-    # if reverseString.status_code != 200:
     print string.text
     return string.text
-
 
 # Ensure JSON response is received from all requests
 def receiveJSON(myEndpoint):
     request = requests.post(myEndpoint, data = {'token': TOKEN})
     return request.json()
+    
+# Step 3 - Needle in a haystack
+def Step3(): 
+    dict = 'http://challenge.code2040.org/api/haystack
+    yourEndpoint = 'http://challenge.code2040.org/api/haystack/validate'
+    needle = 'needle'
+    haystack = 'haystack'
+    myKey = {'token': TOKEN}
+    
+    # Get index
+    for i, j in enumerate(haystack):
+        if j == needle:
+            needleIndex = i
+            print needleIndex
+    
+    # Send index
+    myKey = {'token': TOKEN, 'needle': needleIndex}
+    result = requests.post(yourEndpoint, myKey)
+    
+    # Check if string sent 
+    # if reverseString.status_code != 200:
+    print result.text
+    return result.text
 
 # Trick for code to act as reusable module or as standalone program
 if __name__ == "__main__":
     #Step1()
-    Step2()
+    #Step2()
+    Step3()
 
