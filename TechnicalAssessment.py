@@ -27,14 +27,8 @@ def Step1Registration():
 def receiveJSON(myEndpoint):
     request = requests.post(myEndpoint, data = {'token': TOKEN})
     return request.json()
-    
-# Check all steps using unit tests
-class APIChallengeTest(unittest.TestCase):
-    
-    def Step1Test(self):
-        self.assertEqual("Step 1 complete", Step1Registration())
 
 # Trick for code to act as reusable module or as standalone program
 if __name__ == "__main__":
-    unittest.main()
+    Step1Registration()
 
