@@ -48,9 +48,7 @@ def Step3():
     haystack = dict['haystack']
     myKey = {'token': TOKEN}
     
-    # Get index
-    #needleIndex = haystack.index(needle)
-    
+    # Get index - this case is best when needle is present at multiple indicies
     for i, j in enumerate(haystack):
         if j == needle:
             needleIndex = i
@@ -64,10 +62,30 @@ def Step3():
     # if reverseString.status_code != 200:
     print result.text
     return result.text
+    
+# Step 4 - Prefix
+def Step4(): 
+    dict = receiveJSON('http://challenge.code2040.org/api/prefix')
+    yourEndpoint = 'http://challenge.code2040.org/api/prefix/validate'
+    myPrefix = dict['prefix']
+    myArray = dict['array']
+    myKey = {'token': TOKEN}
+    
+    # Return an array containing strings not starting with prefix
+    for word in myArray[:]:
+        if word.startswith(myPrefix)
+            myArray.remove(word)
+    print myArray
+    return myArray
+    
+    # Post dictionary once array is built
+    myKey = {'token': TOKEN, 'array': newArray}
+    result = requests.post(yourEndpoint, myKey)
 
 # Trick for code to act as reusable module or as standalone program
 if __name__ == "__main__":
     #Step1()
     #Step2()
-    Step3()
+    #Step3()
+    Step4()
 
