@@ -78,8 +78,8 @@ def Step4():
     myKey = {'token': TOKEN, 'array': newArray}
     posted = requests.post(yourEndpoint, json = myKey)
     
-    print newArray
-    return newArray
+    print posted.text
+    return posted.text
 
 # Trick for code to act as reusable module or as standalone program
 if __name__ == "__main__":
