@@ -34,11 +34,6 @@ def Step2():
     # Check if string sent 
     print string.text
     return string.text
-
-# Helper to ensure JSON response is received from all requests
-def receiveJSON(APIendpoint):
-    request = requests.post(APIendpoint, data = {'token': TOKEN})
-    return request.json()
     
 # Step 3 - Needle in a haystack
 def Step3(): 
@@ -61,6 +56,11 @@ def Step3():
     # if reverseString.status_code != 200:
     print result.text
     return result.text
+
+# Helper to ensure JSON response is received from all requests
+def receiveJSON(APIendpoint):
+    request = requests.post(APIendpoint, data = {'token': TOKEN})
+    return request.json() 
     
 # Step 4 - Prefix
 def Step4(): 
