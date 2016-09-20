@@ -69,8 +69,6 @@ def Step4():
     myPrefix = dict['prefix']
     myArray = dict['array']
     
-    print myArray
-    
     # Return an array containing strings not starting with prefix
     newArray = [word for word in myArray if not word.startswith(myPrefix)]
     
@@ -80,11 +78,37 @@ def Step4():
     
     print posted.text
     return posted.text
+    
+# Step 5 - The dating game
+def Step5(): 
+    dict = receiveJSON('http://challenge.code2040.org/api/dating')
+    yourEndpoint = 'http://challenge.code2040.org/api/dating/validate'
+    dateStamp = dict['datestamp']
+    intervalSec = dict['interval']
+    
+    print dateStamp
+    
+    # Compute parts of date
+    year = 1
+    month = 2
+    hour = 3
+    day = 4
+    
+    # Final result
+    resultDate = 
+    
+    # Post dictionary once array is built
+    myKey = {'token': TOKEN, 'datestamp': dateStamp}
+    results = requests.post(yourEndpoint, json = myKey)
+    
+    print results.text
+    return results.text
 
 # Trick for code to act as reusable module or as standalone program
 if __name__ == "__main__":
     #Step1()
     #Step2()
     #Step3()
-    Step4()
+    #Step4()
+    Step5()
 
