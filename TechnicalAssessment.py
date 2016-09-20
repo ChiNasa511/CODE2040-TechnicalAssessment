@@ -35,6 +35,11 @@ def Step2():
     print string.text
     return string.text
     
+# Helper to ensure JSON response is received from all requests
+def receiveJSON(APIendpoint):
+    request = requests.post(APIendpoint, data = {'token': TOKEN})
+    return request.json()
+    
 # Step 3 - Needle in a haystack
 def Step3(): 
     dict = receiveJSON('http://challenge.code2040.org/api/haystack')
@@ -56,11 +61,6 @@ def Step3():
     # if reverseString.status_code != 200:
     print result.text
     return result.text
-
-# Helper to ensure JSON response is received from all requests
-def receiveJSON(APIendpoint):
-    request = requests.post(APIendpoint, data = {'token': TOKEN})
-    return request.json() 
     
 # Step 4 - Prefix
 def Step4(): 
@@ -69,8 +69,10 @@ def Step4():
     myPrefix = dict['prefix']
     myArray = dict['array']
     
+    print myArray
+    
     # Return an array containing strings not starting with prefix
-    newArray = [word for word in myArray if not word.find(myPrefix) != 0]
+    newArray = [word for word in myArray if not word.startswith(myPrefix)]
     
     # Post dictionary once array is built
     myKey = {'token': TOKEN, 'array': newArray}
