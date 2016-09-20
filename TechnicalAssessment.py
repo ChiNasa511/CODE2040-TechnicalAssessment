@@ -86,19 +86,18 @@ def Step5():
     dateStamp = dict['datestamp']
     intervalSec = dict['interval']
     
-    print dateStamp
+    print dateStamp #2016-10-08T18:42:10Z
     
-    # Compute parts of date
-    year = 1
-    month = 2
-    hour = 3
-    day = 4
+    # Compute parts of date 
+    dateTime = time.strptime(dateStamp, "%Y-%m-%dT%H:%M:%SZ") # parse string
+    dateString = str(datetime.datetime(dateTime[0], dateTime[1], dateTime[2], dateTime[3], dateTime[4], dateTime[5]))
+    secs = timedelta(seconds=interval) # add interval to seconds
     
     # Final result
-    resultDate = 3
+    resultDate = (dateString + secs).isoformat() + 'Z'
     
     # Post dictionary once array is built
-    myKey = {'token': TOKEN, 'datestamp': dateStamp}
+    myKey = {'token': TOKEN, 'datestamp': resultDate}
     results = requests.post(yourEndpoint, json = myKey)
     
     print results.text
