@@ -55,7 +55,7 @@ def Step3():
 
     # Send index
     myKey = {'token': TOKEN, 'needle': needleIndex}
-    result = requests.post(yourEndpoint, json = myKey)
+    result = requests.post(yourEndpoint, myKey)
     
     # Check if string sent 
     # if reverseString.status_code != 200:
@@ -76,7 +76,7 @@ def Step4():
     
     # Post dictionary once array is built
     myKey = {'token': TOKEN, 'array': newArray}
-    posted = requests.post(yourEndpoint, myKey)
+    posted = requests.post(yourEndpoint, json = myKey)
     
     print newArray
     return newArray
