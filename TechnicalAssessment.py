@@ -32,8 +32,9 @@ def Step2():
     string = requests.post(yourEndpoint, myKey)
     
     # Check result
-    print string.text
-    return string.text
+    if string.status_code != 200:
+        print string.text
+        return string.text
     
 # Helper to ensure JSON response is received from all requests
 def receiveJSON(APIendpoint):
@@ -58,9 +59,9 @@ def Step3():
     result = requests.post(yourEndpoint, myKey)
     
     # Check if string sent 
-    # if reverseString.status_code != 200:
-    print result.text
-    return result.text
+    if result.status_code != 200:
+        print result.text
+        return result.text
     
 # Step 4 - Prefix
 def Step4(): 
@@ -77,8 +78,9 @@ def Step4():
     posted = requests.post(yourEndpoint, json = myKey)
     
     # Check result
-    print posted.text
-    return posted.text
+    if posted.status_code != 200:
+        print posted.text
+        return posted.text
     
 # Step 5 - The dating game
 def Step5(): 
@@ -100,8 +102,9 @@ def Step5():
     results = requests.post(yourEndpoint, json = myKey)
     
     # Check result
-    print results.text
-    return results.text
+    if results.status_code != 200:
+        print results.text
+        return results.text
 
 # Trick for code to act as reusable module or as standalone program
 if __name__ == "__main__":
