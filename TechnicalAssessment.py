@@ -31,7 +31,7 @@ def Step2():
     myKey = {'token': TOKEN, 'string': reverseString}
     string = requests.post(yourEndpoint, myKey)
     
-    # Check if string sent 
+    # Check result
     print string.text
     return string.text
     
@@ -76,6 +76,7 @@ def Step4():
     myKey = {'token': TOKEN, 'array': newArray}
     posted = requests.post(yourEndpoint, json = myKey)
     
+    # Check result
     print posted.text
     return posted.text
     
@@ -85,8 +86,6 @@ def Step5():
     yourEndpoint = 'http://challenge.code2040.org/api/dating/validate'
     dateStamp = dict['datestamp']
     intervalSec = dict['interval']
-    
-    print dateStamp #2016-10-08T18:42:10Z
     
     # Compute parts of date 
     dateTime = time.strptime(dateStamp, "%Y-%m-%dT%H:%M:%SZ") # parse string
@@ -100,6 +99,7 @@ def Step5():
     myKey = {'token': TOKEN, 'datestamp': resultDate}
     results = requests.post(yourEndpoint, json = myKey)
     
+    # Check result
     print results.text
     return results.text
 
