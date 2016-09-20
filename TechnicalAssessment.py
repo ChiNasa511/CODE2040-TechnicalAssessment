@@ -36,8 +36,8 @@ def Step2():
     return string.text
 
 # Helper to ensure JSON response is received from all requests
-def receiveJSON(myEndpoint):
-    request = requests.post(myEndpoint, data = {'token': TOKEN})
+def receiveJSON(APIendpoint):
+    request = requests.post(APIendpoint, data = {'token': TOKEN})
     return request.json()
     
 # Step 3 - Needle in a haystack
@@ -70,7 +70,7 @@ def Step4():
     myArray = dict['array']
     
     # Return an array containing strings not starting with prefix
-    newArray = [i for i in myArray if not i.startswith(myPrefix)]
+    newArray = [word for word in myArray if not word.startswith(myPrefix)]
     
     # Post dictionary once array is built
     myKey = {'token': TOKEN, 'array': newArray}
