@@ -95,7 +95,7 @@ def Step5():
     day = 4
     
     # Final result
-    resultDate = 
+    resultDate = 3
     
     # Post dictionary once array is built
     myKey = {'token': TOKEN, 'datestamp': dateStamp}
