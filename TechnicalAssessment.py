@@ -91,7 +91,7 @@ def Step5():
     # Compute parts of date 
     dateTime = time.strptime(dateStamp, "%Y-%m-%dT%H:%M:%SZ") # parse string
     dateString = str(datetime.datetime(dateTime[0], dateTime[1], dateTime[2], dateTime[3], dateTime[4], dateTime[5]))
-    secs = datetime.timedelta(seconds=interval) # add interval to seconds
+    secs = datetime.timedelta(seconds = intervalSec) # add interval to seconds
     
     # Final result
     resultDate = (dateString + secs).isoformat() + 'Z'
