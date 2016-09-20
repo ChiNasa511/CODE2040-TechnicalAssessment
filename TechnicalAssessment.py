@@ -55,7 +55,7 @@ def Step3():
 
     # Send index
     myKey = {'token': TOKEN, 'needle': needleIndex}
-    result = requests.post(yourEndpoint, myKey)
+    result = requests.post(yourEndpoint, json = myKey)
     
     # Check if string sent 
     # if reverseString.status_code != 200:
